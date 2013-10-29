@@ -1,0 +1,83 @@
+CHAPTER 13 URL ROUTING
+
+Notice that we didn’t need to define the routes in the test methods. This is because we are loading them
+directly using the RegisterRoutes method in the RouteConfig class.
+
+The MVC Framework uses the model binding system to convert the values contained in the URL to .NET
+types and can handle much more complex situations than shown in this example. We cover model binding in
+Chapter 22.
+
+
+Defining Variable-Length Routes
+
+
+Prioritizing Controllers by Namespaces
+
+
+Constraining a Route Using a Regular Expression
+
+Constraining a Route Using HTTP Methods
+
+The ability to constrain routes by HTTP method is unrelated to the ability to restrict action methods using
+attributes such as HttpGet and HttpPost. The route constraints are processed much earlier in the request pipeline,
+and they determine the name of the controller and action required to process a request. The action method
+attributes are used to determine which specific action method will be used to service a request by the controller. We
+provide details of how to handle different kinds of HTTP methods (including the more unusual ones such as PUT and
+DELETE) in Chapter 14.
+
+
+Defining a Custom Constraint
+
+IRouteConstraint
+
+
+Routing Requests for Disk Files
+
+By default, the routing system checks to see if a URL matches a disk file before evaluating the
+application’s routes
+
+
+//STACKOVERFLOW
+The RouteExistingFiles=true doesn't keep files from being viewed if there is no route for them, 
+it just checks the routes before checking if the file exists. 
+If there is no matching route, it will continue to check if there is a matching file.
+
+
+Configuring the Application Server
+
+Visual Studio 2012 uses IIS Express as the application server for MVC application projects. Not only do we
+have to set the RouteExistingFiles property to true in the RegisterRoutes method, we also have to tell IIS
+Express not to intercept requests for disk files before they are passed to the MVC routing system.
+
+<add name="UrlRoutingModule-4.0" type="System.Web.Routing.UrlRoutingModule"
+preCondition="" />
+
+//*************VISUAL STUDIO DEVELOPMENT SERVER
+Tip An alternative approach is to use the Visual Studio development server, which you can activate in the Web
+section of the project configuration, available when you select UrlsAndRoutes Properties item from the Visual
+Studio Project menu. The development server is pretty simple and isn’t a cut down version of IIS like IIS Express,
+and so it doesn’t intercept requests in the same way.
+
+
+Bypassing the Routing System
+
+
+
+
+
+
+
+CHAPTER 14 Advanced Routing Features
+
+
+
+
+
+
+
+
+
+
+
+
+

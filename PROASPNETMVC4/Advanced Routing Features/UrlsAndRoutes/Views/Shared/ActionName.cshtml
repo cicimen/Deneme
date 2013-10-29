@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>ActionName</title>
+</head>
+<body>
+<div>The controller is: @ViewBag.Controller</div>
+<div>The action is: @ViewBag.Action</div>
+    <div>
+@Html.ActionLink("This is an outgoing URL", "CustomVariable",new { id = "Hello" })
+</div>
+    <div>
+@Html.ActionLink("This targets another controller", "Index", "Admin")
+</div>
+    <div>
+@Html.ActionLink("This is an outgoing URL","Index", "Home", null, new {id = "myAnchorID",@class = "myCSSClass"})
+</div>
+
+    <div>
+@Html.ActionLink("This is an outgoing URL", "Index", "Home",
+"https", "myserver.mydomain.com", " myFragmentName",
+new { id = "MyId"},
+new { id = "myAnchorID", @class = "myCSSClass"})
+</div>
+
+    <div>This is a URL:
+@Url.Action("Index", "Home", new { id = "MyId" })
+</div>
+
+    <div>This is a URL:
+@Html.ActionLink("Click me", "GetLegacyURL",new { legacyURL = "~/articles/Windows_3.1_Overview.html" })
+</div>
+
+</body>
+</html>
