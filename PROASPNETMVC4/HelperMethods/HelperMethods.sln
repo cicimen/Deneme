@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMethods", "HelperMethods\HelperMethods.csproj", "{6E17893C-4D6A-4DDB-BB30-709D67D7E04C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMethods.Tests", "HelperMethods.Tests\HelperMethods.Tests.csproj", "{9400645F-281C-4F92-BD09-805D4EE3A95D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E17893C-4D6A-4DDB-BB30-709D67D7E04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E17893C-4D6A-4DDB-BB30-709D67D7E04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E17893C-4D6A-4DDB-BB30-709D67D7E04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E17893C-4D6A-4DDB-BB30-709D67D7E04C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9400645F-281C-4F92-BD09-805D4EE3A95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9400645F-281C-4F92-BD09-805D4EE3A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9400645F-281C-4F92-BD09-805D4EE3A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9400645F-281C-4F92-BD09-805D4EE3A95D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
